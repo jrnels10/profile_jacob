@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>page</title>
+    <link href="assets/css/demo.css" rel="stylesheet">
+    <link href="assets/css/vjs_slider.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/my.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
@@ -17,45 +20,110 @@
 </head>
 
 <body>
-    <header class="header-wrap fixed-top h-20">
-        <nav class="navbar navbar-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle w3-animate-top" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Dropdown button
-                </button>
-                <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <button class="portfolio" href="#">Portfolio</button>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </div>
+    <header class="header-wrap fixed-top h-20" id="header">
+        <nav class="navbar navbar-light thing">
+            <nav id="navbar-example2" class="navbar w-100" style="background: none">
+                <a class="btn btn-primary btn-lg" href="#" role="button">LinkedIn</a>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Github</a>
+                <ul class="nav nav-pills float-right">
+                    <li class="nav-item">
+                        <a class="nav-link" id="bio-link" href="#bio">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="test-link"href="#test-div">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact-link" href="#mdo">Contact</a>
+                    </li>
+                </ul>
+            </nav>
         </nav>
-        <hr class="my-1">
     </header>
     <div class="container-fluid p-0 w-100 h-100">
-        <div class="jumbotron-fluid">
-            <div class="jumbotron rounded-0 m-0" id="about-me">
-                <div class="change">
-                    <h1 class="display-4 text-center">Jacob Nelson</h1>
-                    <img src="assets/images/Jacob.jpg" class="img-fluid rounded-circle mx-auto d-block" alt="Responsive image">
-                    <div class="w3-container about-me-text mt-5 w3-animate-zoom">
-                        <p>A motivated full stack developer driven to create new products using open source web frameworks.
-                            Experience building web-based UIs for databases, working with APIs and experience in ESRI products
-                            including Arcmap, ArcGIS Pro with some Python experience and experience in developing geoprocessing
-                            models. (Additionally, knowledgeable of web development utilizing CSS, HTML, Javascript, JQuery,
-                            JSON, GIT,). A graduate from the University of Arizona coding boot camp and Arizona State University
-                            with a Bachelors of Science degree in Geography and a Geographic Information System Certificate.
-                            Always looking for new challenges and expanding knowledge in web development and online web mapping.</p>
+        <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+            <!-- <h4 id="fat">@fat</h4>
+                    <p>...</p>
+                    <h4 id="mdo">@mdo</h4>
+                    <p>...</p>
+                    <h4 id="one">one</h4>
+                    <p>...</p>
+                    <h4 id="two">two</h4>
+            <p>...</p>
+            <h4 id="three">three</h4>
+            <p>...</p> -->
+
+            <div class="row jumbotron-fluid">
+                <div class="col-12 jumbotron rounded-0 m-0" id="about-me">
+                    <div class="row about-test w-100 h-100">
+                        <div class="col-12">
+                            <h4 class="display-4 text-center intro"></h4>
+                            <h1 class="display-4 text-center profile-name">Jacob Nelson</h1>
+                            <h4 class="display-4 text-center intro"> - Full stack developer -</h4>
+                        </div>
+                    </div>
+                    <!-- <a class="btn btn-primary btn-lg" href="#" role="button">LinkedIn</a>
+                            <a class="btn btn-primary btn-lg" href="#" role="button">Github</a> -->
+                    <!-- <div class="video-play"></div> -->
+
+                </div>
+                <div class="col-12 jumbotron m-0" id="bio">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="assets/images/Jacob.jpg" class="img-fluid rounded-circle mx-auto d-block w3-animate-left" alt="Responsive image"
+                                id="profile-pic">
+                        </div>
+                        <div class="col-8 w3-container about-me-text mt-5 w3-animate-right">
+                            <p>A motivated full stack developer driven to create new products using open source web frameworks.
+                                Experience building web-based UIs for databases, working with APIs and experience in ESRI
+                                products including Arcmap, ArcGIS Pro with some Python experience and experience in developing
+                                geoprocessing models. (Additionally, knowledgeable of web development utilizing CSS, HTML,
+                                Javascript, JQuery, JSON, GIT,). A graduate from the University of Arizona coding boot camp
+                                and Arizona State University with a Bachelors of Science degree in Geography and a Geographic
+                                Information System Certificate. Always looking for new challenges and expanding knowledge
+                                in web development and online web mapping.</p>
+                        </div>
                     </div>
                 </div>
-                <!-- <a class="btn btn-primary btn-lg" href="#" role="button">LinkedIn</a>
-          <a class="btn btn-primary btn-lg" href="#" role="button">Github</a> -->
-                <div class="video-play"></div>
+                <div class="col-12 m-2" id="test-div">
+
+                    <div class="carousel">
+                        <div class="carousel__slide test-p">
+                            <!-- <p id="test-p">Slide 1</p> -->
+                        </div>
+
+                    </div>
+                    <hr>
+                    <nav>
+                        <ul class="menu">
+                            <li class="menu__element">
+                                <a href="#" class="js-prev">Prev</a>
+                            </li>
+                            <li class="menu__element">
+                                <a href="#" class="js-next">Next</a>
+                            </li>
+                            <li class="menu__element">
+                                <a href="#" class="js-start-loop">Start loop</a>
+                            </li>
+                            <li class="menu__element">
+                                <a href="#" class="js-stop-loop">Stop loop</a>
+                            </li>
+                            <li class="menu__element">
+                                <a href="#" class="js-destroy">Destroy</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
+
     </div>
+    <script src="assets/vjslider.js"></script>
+    <script>var sliderOptions = {
+            numberOfVisibleSlides: 12
+        };</script>
+    <script src="assets/nav.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script src="assets/pro.js"></script>
 </body>
 

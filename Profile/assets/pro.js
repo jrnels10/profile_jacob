@@ -1,29 +1,46 @@
 $(document).ready(function () {
-    function timer(value) {
+    $('.navbar').hide();
+    $('.profile-name').hide();
+    $('.intro').hide();
+    function nameTitle(value) {
         setTimeout(function () {
-            console.log('hello')
+            $('.profile-name').fadeIn(3000);
         }, value);
     }
 
-    timer(5000);
+    nameTitle(1000);
+    function slogan(value) {
+        setTimeout(function () {
+            $('.intro').fadeIn(3000);
+        }, value);
+    }
+
+    slogan(2000);
+    function timer(value) {
+        setTimeout(function () {
+            $('.navbar').fadeIn(3000);
+        }, value);
+    }
+
+    timer(3000);
 
 
     let projectPort = [
         mapUp = {
-            name: 'mapUp',
+            num: '1',
             link: 'https://xeroneon.github.io/Project-1/',
             image: 'assets/images/map-up.png',
             label: 'Map-Up',
             preview: 'https://www.youtube.com/embed/6ZW3xXFesLY?autoplay=1',
         },
         trivia = {
-            name: 'trivia',
+            num: '2',
             link: 'https://jrnels10.github.io/Trivia-game/',
             image: 'assets/images/cowboy-trivia.jpg',
             label: 'Cowboy Trivia',
         },
         gifTastic = {
-            name: 'gifTastic',
+            num: '3',
             link: 'https://jrnels10.github.io/GifTastic/',
             image: 'https://media3.giphy.com/media/11ISwbgCxEzMyY/giphy.gif',
             label: 'GifTastic!',
@@ -32,61 +49,85 @@ $(document).ready(function () {
 
     console.log(projectPort.length)
 
+    let box;
 
-
-    $('.portfolio').on('click', function projDiv() {
-        console.log('port click');
-        $('.change').replaceWith('<div class="row port-stuff">');
-        for (i = 0; i < projectPort.length; i++) {
-            console.log(projectPort[i]);
-            let box = $(`<div class='every-proj m-auto w3-animate-left' id='${projectPort[i].name}'>
-                <a href="${projectPort[i].link}">
-                <div class="card btn btn-primary mt-2 p-0">
-                <img src="${projectPort[i].image}" class="img-thumbnail w-100 h-auto m-0" alt="Card image cap">
-                <label class="card-img-overlay p-2" style="background-color: maroon; top: 45%; height: 40px; opacity: .5">${projectPort[i].label}</label>
-                </div>
-                </a>
-                <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="${projectPort[i].name}">
-                    Preview
-                </button>
-    
-               </div>
+    // $('.portfolio').on('click', function projDiv() {
+    //     console.log('port click');
+    //     $('.change').replaceWith('<div class="row port-stuff">');
+    for (i = 0; i < projectPort.length; i++) {
+        console.log(projectPort[i]);
+        box = $(`
+                        <div class='every-proj m-4' id='${projectPort[i].num}'>
+                            <a href="${projectPort[i].link}">
+                                <div class="card btn btn-primary mt-2 p-0">
+                                    <img src="${projectPort[i].image}" class="img-thumbnail w-100 h-auto m-0" alt="Card image cap">
+                                    <label class="card-img-overlay p-2" style="background-color: maroon; top: 45%; height: 40px; opacity: .5">${projectPort[i].label}</label>
+                                </div>
+                            </a>
+                            <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="${projectPort[i].num}">
+                                Preview
+                            </button>   
+                        </div>
+                  
                 `);
-            $('.port-stuff').append(box);
+        $('.test-p').append(box);
+    }
+
+    $(document).scroll(function () {
+        var scrollNum = ($(document).scrollTop());
+        if (scrollNum > 0) {
+            $('.navbar').fadeOut(1000);
+
         }
-        var target;
-        $('button').on('click', function () {
-            target = $(this).attr('id');
-            $("#" + target).show().siblings("div").hide();
-            console.log($(this).attr('id'))
-            $('.row').css('flex-wrap', 'nowrap');
-            $('.row').css('margin', '20px');
-            
-            for (i = 0; i < projectPort.length; i++) {
-                if (target === projectPort[i].name) {
-                    console.log('I found ya!');
-                    $('#projectPort[i].name').css('margin-left', '10px');
-                    let showWindow = $(`<div class='vid'>
-                                        <button class='close'>Close window</button>
-                                        <iframe width="754" height="480" src="${projectPort[i].preview}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                                        
-                                        `)
-                    $('.port-stuff').append(showWindow);
-                };
-            }
+        else {
+            $('.navbar').fadeIn(1000);
 
-            $('.close').on('click', function () {
-                console.log(target);
-                $("#" + target).show().siblings("div").show();
-                $('.row').css('margin-top', '120px');
-                $('.port-stuff').empty();
-                $('.video-play').empty();
-
-
-                projDiv();
-            });
-        });
+        }
     });
+    $("#bio-link").click(function() {
+        $('html,body').animate({
+            scrollTop: $("#bio").offset().top},
+            'slow');
+    });
+    $("#test-link").click(function() {
+        $('html,body').animate({
+            scrollTop: $("#test-div").offset().top},
+            'slow');
+    });
+});
+    // var target;
+    // $('button').on('click', function () {
+    //     $('#test-div').append(box);
+    //     target = $(this).attr('id');
+    //     $("#" + target).show().siblings("div").hide();
+    //     console.log($(this).attr('id'))
+    //     $('.row').css('flex-wrap', 'nowrap');
+    //     $('.row').css('margin', '20px');
+
+    //     for (i = 0; i < projectPort.length; i++) {
+    //         if (target === projectPort[i].num) {
+    //             console.log('I found ya!');
+    //             $('#projectPort[i].name').css('margin-left', '10px');
+    //             let showWindow = $(`<div class='vid'>
+    //                                 <button class='close'>Close window</button>
+    //                                 <iframe width="754" height="480" src="${projectPort[i].preview}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+    //                                 `)
+    //             $('.port-stuff').append(showWindow);
+    //         };
+    //     }
+
+    //     $('.close').on('click', function () {
+    //         console.log(target);
+    //         $("#" + target).show().siblings("div").show();
+    //         $('.row').css('margin-top', '120px');
+    //         $('.port-stuff').empty();
+    //         $('.video-play').empty();
+
+
+    //         projDiv();
+    //     });
+
 
 
 
@@ -143,14 +184,23 @@ $(document).ready(function () {
     //     }, value);
     // }
     // bioEntry(1000);window.onscroll = function() {myFunction()};
-    // $(document).scroll(function () {
-    //     var scrollNum = ($(document).scrollTop());
     //     console.log(scrollNum)
-    //     if (scrollNum > 50 && scrollNum < 100) {
-    //         // console.log('scroll number: ' + scrollNum);
-    //         console.log(status)
-    //         $('#collapseOne').removeClass('show');
+    //     if (scrollNum > 10) {
+    //         // $('#about-me-text').hide();
+    //         // $('#profile-pic').hide();
+    //         $('.about-test').hide();
+
+
+
+    //         //         // console.log('scroll number: ' + scrollNum);
+    //         //         console.log(status)
+    //         //         $('#collapseOne').removeClass('show');
     //     }
+    //     else {
+    //         $('.about-test').show();
+
+    //     }
+    // });
     //     else if (scrollNum < 10) {
     //         $('#collapseOne').addClass('show');
     // });
@@ -176,4 +226,3 @@ $(document).ready(function () {
     // }
 
     // });
-});
