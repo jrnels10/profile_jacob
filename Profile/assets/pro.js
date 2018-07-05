@@ -6,25 +6,25 @@ $(document).ready(function () {
             $('.profile-name').fadeIn(3000);
         }, value);
     }
-    
+
     nameTitle(1000);
     function slogan(value) {
         setTimeout(function () {
             $('.intro').fadeIn(3000);
         }, value);
     }
-    
+
     slogan(2000);
     $('.navbar').hide();
     function hoverNav() {
-        $('#header').hover(function(){
+        $('#header').hover(function () {
             console.log('hover');
             $('.navbar').fadeIn(500);
-        }, function(){
+        }, function () {
             console.log('no-hover');
             $('.navbar').fadeOut(500);
         })
-        
+
     }
     hoverNav();
 
@@ -58,23 +58,75 @@ $(document).ready(function () {
     // $('.portfolio').on('click', function projDiv() {
     //     console.log('port click');
     //     $('.change').replaceWith('<div class="row port-stuff">');
-    for (i = 0; i < projectPort.length; i++) {
-        console.log(projectPort[i]);
-        box = $(`
+    function loadCarousel() {
+        $('.carousel').css({ 'width': '350%' });
+        $('.every-proj').css({ 'width': '200px' });
+        for (i = 0; i < projectPort.length; i++) {
+            console.log(projectPort[i]);
+            box = $(`
                         <div class='every-proj m-4' id='${projectPort[i].num}'>
                             <a href="${projectPort[i].link}">
                                 <div class="img__wrap mt-2 p-0">
                                     <img src="${projectPort[i].image}" class="card w-100 h-auto m-0" alt="Card image cap">
                                     </div>
                             </a>
-                            <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="${projectPort[i].num}">
+                            <button class="btn btn-secondary dropdown-toggle w-100 sample" type="button" id="${projectPort[i].num}">
                                 Preview
                             </button>   
                         </div>
                   
                 `);
-        $('.test-p').append(box);
-    }
+            $('.test-p').append(box);
+        }
+    };
+    loadCarousel();
+
+    var target;
+    $('.sample').on('click', function () {
+        console.log('clicked preview')
+        $('.carousel').css({ 'height': '150px' });
+        $('.every-proj').css({ 'width': '125px' });
+
+        target = $(this).attr('id');
+        for (i = 0; i < projectPort.length; i++) {
+            if (target === projectPort[i].num) {
+                console.log('I found ya!');
+                // $('#projectPort[i].name').css('margin-left', '10px');
+                let showWindow = $(`<div class='row vid' style='width: 540px; height: 600px;>
+                                        <div class= 'col-12>
+                                            <div class='row close-bar'>
+                                                <button class='close'>Close window</button>
+                                            </div>
+                                            <div class='row video-section'>
+                                                <iframe width="540" height="380" src="${projectPort[i].preview}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    `)
+                $('.video-preview').append(showWindow);
+            };
+        }
+        // $("#" + target).show().siblings("div").hide();
+        // console.log($(this).attr('id'))
+        // $('.row').css('flex-wrap', 'nowrap');
+        // $('.row').css('margin', '20px');
+        
+        
+        $('.close').on('click', function () {
+            console.log('target');
+            // $("#" + target).show().siblings("div").show();
+            // $('.row').css('margin-top', '120px');
+            $('.video-preview').empty();
+            
+            
+            loadCarousel()
+        });
+    });
+
+
+
+
+
 
     // $(document).scroll(function () {
     //     var scrollNum = ($(document).scrollTop());
@@ -87,49 +139,19 @@ $(document).ready(function () {
 
     //     }
     // });
-    $("#bio-link").click(function() {
+    $("#bio-link").click(function () {
         $('html,body').animate({
-            scrollTop: $("#bio").offset().top},
+            scrollTop: $("#bio").offset().top
+        },
             'slow');
     });
-    $("#test-link").click(function() {
+    $("#test-link").click(function () {
         $('html,body').animate({
-            scrollTop: $("#test-div").offset().top},
+            scrollTop: $("#test-div").offset().top
+        },
             'slow');
     });
 });
-    // var target;
-    // $('button').on('click', function () {
-    //     $('#test-div').append(box);
-    //     target = $(this).attr('id');
-    //     $("#" + target).show().siblings("div").hide();
-    //     console.log($(this).attr('id'))
-    //     $('.row').css('flex-wrap', 'nowrap');
-    //     $('.row').css('margin', '20px');
-
-    //     for (i = 0; i < projectPort.length; i++) {
-    //         if (target === projectPort[i].num) {
-    //             console.log('I found ya!');
-    //             $('#projectPort[i].name').css('margin-left', '10px');
-    //             let showWindow = $(`<div class='vid'>
-    //                                 <button class='close'>Close window</button>
-    //                                 <iframe width="754" height="480" src="${projectPort[i].preview}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-    //                                 `)
-    //             $('.port-stuff').append(showWindow);
-    //         };
-    //     }
-
-    //     $('.close').on('click', function () {
-    //         console.log(target);
-    //         $("#" + target).show().siblings("div").show();
-    //         $('.row').css('margin-top', '120px');
-    //         $('.port-stuff').empty();
-    //         $('.video-play').empty();
-
-
-    //         projDiv();
-    //     });
 
 
 

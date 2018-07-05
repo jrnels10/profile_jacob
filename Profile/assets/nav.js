@@ -12,7 +12,7 @@
 // })
 document.addEventListener('DOMContentLoaded', function () {
     var slider = new VJSlider(document.querySelector('.carousel'), sliderOptions),
-        loopStarted = true,
+        loopStarted = false,
         loop;
 
     if (document.querySelector('.js-prev') !== null) {
