@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    $('.navbar').hide();
     $('.profile-name').hide();
     $('.intro').hide();
     function nameTitle(value) {
@@ -7,22 +6,27 @@ $(document).ready(function () {
             $('.profile-name').fadeIn(3000);
         }, value);
     }
-
+    
     nameTitle(1000);
     function slogan(value) {
         setTimeout(function () {
             $('.intro').fadeIn(3000);
         }, value);
     }
-
+    
     slogan(2000);
-    function timer(value) {
-        setTimeout(function () {
-            $('.navbar').fadeIn(3000);
-        }, value);
+    $('.navbar').hide();
+    function hoverNav() {
+        $('#header').hover(function(){
+            console.log('hover');
+            $('.navbar').fadeIn(500);
+        }, function(){
+            console.log('no-hover');
+            $('.navbar').fadeOut(500);
+        })
+        
     }
-
-    timer(3000);
+    hoverNav();
 
 
     let projectPort = [
@@ -59,10 +63,9 @@ $(document).ready(function () {
         box = $(`
                         <div class='every-proj m-4' id='${projectPort[i].num}'>
                             <a href="${projectPort[i].link}">
-                                <div class="card btn btn-primary mt-2 p-0">
-                                    <img src="${projectPort[i].image}" class="img-thumbnail w-100 h-auto m-0" alt="Card image cap">
-                                    <label class="card-img-overlay p-2" style="background-color: maroon; top: 45%; height: 40px; opacity: .5">${projectPort[i].label}</label>
-                                </div>
+                                <div class="img__wrap mt-2 p-0">
+                                    <img src="${projectPort[i].image}" class="card w-100 h-auto m-0" alt="Card image cap">
+                                    </div>
                             </a>
                             <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="${projectPort[i].num}">
                                 Preview
@@ -73,17 +76,17 @@ $(document).ready(function () {
         $('.test-p').append(box);
     }
 
-    $(document).scroll(function () {
-        var scrollNum = ($(document).scrollTop());
-        if (scrollNum > 0) {
-            $('.navbar').fadeOut(1000);
+    // $(document).scroll(function () {
+    //     var scrollNum = ($(document).scrollTop());
+    //     if (scrollNum > 0) {
+    //         $('.navbar').fadeOut(1000);
 
-        }
-        else {
-            $('.navbar').fadeIn(1000);
+    //     }
+    //     else {
+    //         $('.navbar').fadeIn(1000);
 
-        }
-    });
+    //     }
+    // });
     $("#bio-link").click(function() {
         $('html,body').animate({
             scrollTop: $("#bio").offset().top},

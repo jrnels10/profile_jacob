@@ -1,6 +1,18 @@
+// $(document).ready(function () {
+//     var slider = new VJSlider(document.querySelector('.carousel'), sliderOptions),
+//         loopStarted = true,
+//         loop;
+//     if (!loopStarted) {
+//         slider.next();
+//         loop = setInterval(function () {
+//             slider.next();
+//         }, 1000);
+//         loopStarted = true;
+//     }
+// })
 document.addEventListener('DOMContentLoaded', function () {
     var slider = new VJSlider(document.querySelector('.carousel'), sliderOptions),
-        loopStarted = false,
+        loopStarted = true,
         loop;
 
     if (document.querySelector('.js-prev') !== null) {
@@ -17,16 +29,17 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
     if (document.querySelector('.js-start-loop') !== null) {
-        document.querySelector('.js-start-loop').addEventListener('click', function (event) {
-            event.preventDefault();
-            if (!loopStarted) {
-                slider.next();
-                loop = setInterval(function () {
+            document.querySelector('.js-start-loop').addEventListener('click', function (event) {
+                event.preventDefault();
+                if (!loopStarted) {
                     slider.next();
-                }, 1000);
-                loopStarted = true;
-            }
-        });
+                    loop = setInterval(function () {
+                        slider.next();
+                    }, 1000);
+                    loopStarted = true;
+                }
+            });
+
     }
 
     if (document.querySelector('.js-stop-loop') !== null) {

@@ -2,13 +2,23 @@ body {
     margin: 0px;
     height:100vh;
 }
-.navbar {
+#header{
+    height:60px;
+    /* background:linear-gradient(
+        rgba(0, 0, 0, 0.75), 
+        rgba(0, 0, 0, 0.75)
+      ); */
+
+}
+.navbar{
+    height:60px;
     background:linear-gradient(
         rgba(0, 0, 0, 0.75), 
         rgba(0, 0, 0, 0.75)
       );
 
 }
+
 .header-wrap {
     width: 100%;
 }
@@ -80,7 +90,9 @@ body {
     margin-top: 50px;
     margin-bottom: 50px;
 }
-
+#bio {
+    height:100vh;
+}
 p {
     font-weight: bold;
     color: black;
@@ -93,8 +105,18 @@ p {
 }
 
 
-#test-div {
+.test-div {
     z-index: 100;
-    background-color: yellow;
+    background-color: grey;
     height: 900px;
+}
+.bio-pic {
+    border-radius: 15px;
+  transition: width 250ms, height 250ms;
+  max-height: 344px;
+}
+.project-title {
+    margin: auto;
+    color: white;
+    
 }
