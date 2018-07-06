@@ -15,18 +15,18 @@ $(document).ready(function () {
     }
 
     slogan(2000);
-    // $('.navbar').hide();
-    // function hoverNav() {
-    //     $('#header').hover(function () {
-    //         console.log('hover');
-    //         $('.navbar').fadeIn(500);
-    //     }, function () {
-    //         console.log('no-hover');
-    //         $('.navbar').fadeOut(500);
-    //     })
+    $('.navbar').hide();
+    function hoverNav() {
+        $('#header').hover(function () {
+            console.log('hover');
+            $('.navbar').fadeIn(500);
+        }, function () {
+            console.log('no-hover');
+            $('.navbar').fadeOut(500);
+        })
 
     }
-    // hoverNav();
+    hoverNav();
 
 
     let projectPort = [
