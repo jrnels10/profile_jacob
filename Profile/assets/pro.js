@@ -15,14 +15,14 @@ $(document).ready(function () {
     }
 
     slogan(2000);
-    $('.navbar').hide();
+    $('.nav-pills').hide();
     function hoverNav() {
         $('#header').hover(function () {
             console.log('hover');
-            $('.navbar').fadeIn(500);
+            $('.nav-pills').fadeIn(500);
         }, function () {
             console.log('no-hover');
-            $('.navbar').fadeOut(500);
+            $('.nav-pills').fadeOut(500);
         })
 
     }
@@ -55,7 +55,7 @@ $(document).ready(function () {
             image: 'Profile/assets/images/ct.jpg',
             label: 'GifTastic!',
         }
-        
+
     ]
 
     console.log(projectPort.length)
@@ -117,15 +117,15 @@ $(document).ready(function () {
         // console.log($(this).attr('id'))
         // $('.row').css('flex-wrap', 'nowrap');
         // $('.row').css('margin', '20px');
-        
-        
+
+
         $('.close').on('click', function () {
             console.log('target');
             // $("#" + target).show().siblings("div").show();
             // $('.row').css('margin-top', '120px');
             $('.video-preview').empty();
-            
-            
+
+
             loadCarousel()
         });
     });
