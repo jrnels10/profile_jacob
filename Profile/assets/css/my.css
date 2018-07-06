@@ -48,7 +48,7 @@ body {
     height:100vh;
 }
 #portfolio {
-    background-image: url(../images/2.png);
+    background-image: url(/images/2.png);
     background-size: 100%;    
 }
 /* .about-me-text {
