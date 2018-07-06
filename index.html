@@ -23,8 +23,7 @@
     <header class="header-wrap fixed-top h-20" id="header">
         <nav class="navbar navbar-light thing">
             <nav id="navbar-example2" class="navbar w-100" style="background: none">
-                <a class="btn btn-primary btn-lg" href="#" role="button">LinkedIn</a>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Github</a>
+                <div class="title-name col-8 float-left h-100"></div>
                 <ul class="nav nav-pills float-right">
                     <li class="nav-item">
                         <a class="nav-link" id="home-link" href="#about-me">Home</a>
@@ -32,7 +31,7 @@
                     <li class="nav-item">
                         <a class="nav-link" id="bio-link" href="#bio">About</a>
                     </li>
-                 
+
                     <li class="nav-item">
                         <a class="nav-link" id="test-link" href="#test-div">Projects</a>
                     </li>
@@ -68,35 +67,84 @@
 
                 </div>
                 <div class="col-12 jumbotron m-0 pt-1" id="bio">
-                    <div class="row">
-                        <div class="col-4 border-right">
-                            <img src="Profile/assets/images/Jacob.jpg" class="img-fluid rounded-circle mx-auto d-block w3-animate-left" alt="Responsive image"
-                                id="profile-pic">
+                    <div class="row h-100">
+                        <div class="col-4 border-right h-100">
+                            <ul>
+                                <li class="pic">
+                                    <img src="Profile/assets/images/Jacob.jpg" class="img-fluid rounded-circle mx-auto d-block w3-animate-left" alt="Responsive image"
+                                        id="profile-pic">
+                                </li>
+                                <li class="LinkedIn text-center">
+                                    <div class="spacer m-2">
+                                        <a class=' w-100 mx-auto' href="https://www.linkedin.com/in/jacob-nelson-b8a80571/">
+                                            <button class="btn">
+                                                <img src="Profile/assets/images/linkin.png" alt="LinkedIn" class="img-thumbnail">
+                                                <!-- <a class="btn btn-primary btn-lg" href="#" role="button">LinkedIn</a> -->
+                                            </button>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="Github text-center">
+                                    <div class="spacer m-2">
+                                        <a class='mx-auto' href="https://github.com/jrnels10">
+                                            <button class="btn">
+                                                <img src="Profile/assets/images/git.png" alt="git" class="img-thumbnail">
+                                                <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Github</a> -->
+                                            </button>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                         <div class="col-8 w3-container about-me-text mt-5 w3-animate-right">
-                            <p>A motivated full stack developer driven to create new products using open source web frameworks.
-                                Experience building web-based UIs for databases. A graduate from the University of Arizona
-                                coding boot camp and Arizona State University with a Bachelors of Science degree in Geography
-                                and a Geographic Information System Certificate. Always looking for new challenges and expanding
-                                knowledge in web development and online web mapping.</p>
-                            <div class="row" style="border: solid black 2px">Skills in...
-                                <ul class="skills">
-                                    <li APIs and experience in ESRI products including Arcmap, ArcGIS Pro with some Python experience and experience in developing
-                                        geoprocessing models. (Additionally, knowledgeable of web development utilizing CSS,
-                                        HTML, Javascript, JQuery, JSON, GIT,). </ul>
-                            </div>
+                            <p> A motivated full stack developer driven to create new products using open source web frameworks.
+                                Experience building web-based UIs for databases, working with APIs and experience in ESRI
+                                products including Arcmap, ArcGIS Pro with some Python experience and experience in developing
+                                geoprocessing models. (Additionally, knowledgeable of web development utilizing CSS, HTML,
+                                Javascript, JQuery, JSON, GIT,). A graduate from the University of Arizona coding boot camp
+                                and Arizona State University with a Bachelors of Science degree in Geography and a Geographic
+                                Information System Certificate. Always looking for new challenges and expanding knowledge
+                                in web development and online web mapping.
+                            </p>
+                            <!-- <div class="row" style="border: solid black 2px">Skills in...
+                                <ul class="list-group skills w-100">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <img src="Profile/assets/images/js.png"> Javascript
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        GIT
+                                        <span class="badge badge-primary badge-pill">2</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <img src="Profile/assets/images/flat,550x550,075,f.jpg"> Firebase
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        ESRI ArcGIS
+                                        <span class="badge badge-primary badge-pill">1</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Node.js
+                                        <span class="badge badge-primary badge-pill">1</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        API implementation
+                                        <span class="badge badge-primary badge-pill">1</span>
+                                    </li>
+                                </ul>
+ -->
+                            <!-- </div> -->
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row jumbotron-fluid">
+            <div class="row jumbotron-fluid test-jumbo">
 
                 <div class="col-12 m-auto p-0" id="test-div">
-                    <div class="row project-header">
+                    <div class="row project-header m-3">
                         <h1 class="project-title">Projects</h1>
                     </div>
-                    <div class="row ">
-                        <div class="col-6 m-auto p-0 carry">
+                    <div class="row" style="height: 80%">
+                        <div class="col-6 m-auto p-0 carry" style="border: coral solid 2px; height: 100%">
 
                             <div class="carousel">
                                 <div class="carousel__slide test-p">
@@ -127,7 +175,7 @@
                         </div>
                     </div>
                     <div class="row project-preview m-0 w-100">
-                        <div class="col-12 video-preview m-auto"></div>
+                        <div class="col-12 video-preview m-auto p-0"></div>
                     </div>
                 </div>
             </div>

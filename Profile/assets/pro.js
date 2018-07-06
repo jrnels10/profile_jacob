@@ -15,32 +15,32 @@ $(document).ready(function () {
     }
 
     slogan(2000);
-    $('.navbar').hide();
-    function hoverNav() {
-        $('#header').hover(function () {
-            console.log('hover');
-            $('.navbar').fadeIn(500);
-        }, function () {
-            console.log('no-hover');
-            $('.navbar').fadeOut(500);
-        })
+    // $('.navbar').hide();
+    // function hoverNav() {
+    //     $('#header').hover(function () {
+    //         console.log('hover');
+    //         $('.navbar').fadeIn(500);
+    //     }, function () {
+    //         console.log('no-hover');
+    //         $('.navbar').fadeOut(500);
+    //     })
 
     }
-    hoverNav();
+    // hoverNav();
 
 
     let projectPort = [
         mapUp = {
             num: '1',
             link: 'https://xeroneon.github.io/Project-1/',
-            image: '../images/map-up.png',
+            image: 'Profile/assets/images/map-up.png',
             label: 'Map-Up',
             preview: 'https://www.youtube.com/embed/6ZW3xXFesLY?autoplay=1',
         },
         trivia = {
             num: '2',
             link: 'https://jrnels10.github.io/Trivia-game/',
-            image: '../images/cowboy-trivia.jpg',
+            image: 'Profile/assets/images/cowboy-trivia.jpg',
             label: 'Cowboy Trivia',
         },
         gifTastic = {
@@ -48,7 +48,14 @@ $(document).ready(function () {
             link: 'https://jrnels10.github.io/GifTastic/',
             image: 'https://media3.giphy.com/media/11ISwbgCxEzMyY/giphy.gif',
             label: 'GifTastic!',
+        },
+        crazyTrain = {
+            num: '4',
+            link: 'https://jrnels10.github.io/Crazy_Train/',
+            image: 'Profile/assets/images/ct.jpg',
+            label: 'GifTastic!',
         }
+        
     ]
 
     console.log(projectPort.length)
@@ -92,13 +99,13 @@ $(document).ready(function () {
             if (target === projectPort[i].num) {
                 console.log('I found ya!');
                 // $('#projectPort[i].name').css('margin-left', '10px');
-                let showWindow = $(`<div class='row vid' style='width: 540px; height: 600px;>
+                let showWindow = $(`<div class='row vid m-auto' style='width: 540px; height: 390px;>
                                         <div class= 'col-12>
-                                            <div class='row close-bar'>
+                                            <div class='row btn btn-secondary close-bar' style='height: 20px; background: whitesmoke'>
                                                 <button class='close'>Close window</button>
                                             </div>
                                             <div class='row video-section'>
-                                                <iframe width="540" height="380" src="${projectPort[i].preview}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                                <iframe width="580" height="380" src="${projectPort[i].preview}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                                             </div>
                                         </div>
                                     </div>

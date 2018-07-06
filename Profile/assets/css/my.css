@@ -47,18 +47,23 @@ body {
     background-attachment: fixed;
     height:100vh;
 }
+#test-div {
+    position: relative;
+    /* top, transparent red */ 
+    background-image:linear-gradient(
+        rgba(255, 147, 76, 0.75), 
+        rgba(255, 147, 76, 0.75)), url(../images/what-the-hex/what-the-hex.png);
+    background-repeat: repeat;
+    /* background-size: 100%; */
+    /* height:100%; */
+}
 #portfolio {
     background-image: url(/images/2.png);
     background-size: 100%;    
 }
-/* .about-me-text {
-    position: fixed; 
-    width: 100%;
-    height: 130px;
-    background-color: black;
-    opacity: .5;
-    margin-bottom: 50px;
-} */
+.skills {
+    background-color: clear;
+}
 @font-face { 
     font-family: 'Briberra'; 
     src: url('Briberra.otf');
@@ -71,6 +76,10 @@ body {
     font-family: 'Briberra', sans-serif;
     margin: 20px;
     font-size: 220px !important;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: whitesmoke !important;
+    background-color: clear !important; 
 }
 .intro {
     font-family: Arial, Helvetica, sans-serifs;
@@ -90,6 +99,10 @@ body {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+.LinkedIn, .Github {
+    width: 50%;
+    margin: auto;
+}
 #bio {
     height:100vh;
 }
@@ -103,7 +116,9 @@ p {
     width: 200px;
     height:auto;
 }
-
+#test-jumbo {
+    height: 800px;
+}
 
 #test-div {
     z-index: 100;
