@@ -33,14 +33,14 @@ $(document).ready(function () {
         mapUp = {
             num: '1',
             link: 'https://xeroneon.github.io/Project-1/',
-            image: 'profile/assets/images/map-up.png',
+            image: 'Profile/assets/images/map-up.png',
             label: 'Map-Up',
             preview: 'https://www.youtube.com/embed/6ZW3xXFesLY?autoplay=1',
         },
         trivia = {
             num: '2',
             link: 'https://jrnels10.github.io/Trivia-game/',
-            image: 'profile/assets/images/cowboy-trivia.jpg',
+            image: 'Profile/assets/images/cowboy-trivia.jpg',
             label: 'Cowboy Trivia',
         },
         gifTastic = {
