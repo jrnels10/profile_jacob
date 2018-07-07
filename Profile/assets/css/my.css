@@ -3,7 +3,7 @@ body {
     height:100vh;
 }
 #header{
-    height:60px;
+    height:80px;
     /* background:linear-gradient(
         rgba(0, 0, 0, 0.75), 
         rgba(0, 0, 0, 0.75)
@@ -22,6 +22,10 @@ body {
 
 }
 
+.body-bio {
+    height: 60% !important;
+}
+
 .header-wrap {
     width: 100%;
 }
@@ -32,7 +36,7 @@ body {
 
 .jumbotron {
     opacity: 80%;
-    background-color: clear;
+    background-color: clear !important;
 }
 .img-fluid {
     max-width: 200px !important;
@@ -54,8 +58,8 @@ body {
     position: relative;
     /* top, transparent red */ 
     background-image:linear-gradient(
-        rgba(255, 147, 76, 0.75), 
-        rgba(255, 147, 76, 0.75)), url(../images/what-the-hex/what-the-hex.png);
+        rgba(0, 0, 0, 0.75), 
+        rgba(0, 0, 0, 0.75)), url(../images/what-the-hex/what-the-hex.png);
     background-repeat: repeat;
     /* background-size: 100%; */
     /* height:100%; */
@@ -64,9 +68,7 @@ body {
     background-image: url(/images/2.png);
     background-size: 100%;    
 }
-.skills {
-    background-color: clear;
-}
+
 @font-face { 
     font-family: 'Briberra'; 
     src: url('Briberra.otf');
@@ -80,10 +82,7 @@ body {
     margin: 20px;
     font-size: 220px !important;
 }
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: whitesmoke !important;
-    background-color: clear !important; 
-}
+
 .intro {
     font-family: Arial, Helvetica, sans-serifs;
     font-size: 50px;
@@ -102,12 +101,22 @@ body {
     margin-top: 50px;
     margin-bottom: 50px;
 }
-.LinkedIn, .Github {
-    width: 50%;
+.spacer {
+    width: 40% !important;
     margin: auto;
 }
+
 #bio {
-    height:100vh;
+      height:100vh;
+        position: relative;
+        background-image:
+ 
+            url(../images/sun-pattern/sun-pattern.png);
+        background-repeat: repeat;
+        
+            -webkit-box-shadow: 0px -48px 76px 0px black;
+               -moz-box-shadow: 0px -48px 76px 0px black;
+                    box-shadow: 0px -48px 76px 0px black;     
 }
 p {
     font-weight: bold;
@@ -137,4 +146,8 @@ p {
     margin: auto;
     color: white;
 
+}
+.carry {
+    width: 100%;
+    border: coral solid 2px;
 }

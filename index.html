@@ -66,35 +66,36 @@
                     </div>
 
                 </div>
-                <div class="col-12 jumbotron m-0 pt-1" id="bio">
-                    <div class="row h-100">
+                <div class="col-12 jumbotron m-0 h-100" id="bio">
+                    <div class="row inner-bio">
+
+                    </div>
+                    <div class="row body-bio">
+
                         <div class="col-4 border-right h-100">
                             <ul>
-                                <li class="pic">
-                                    <img src="Profile/assets/images/Jacob.jpg" class="img-fluid rounded-circle mx-auto d-block w3-animate-left" alt="Responsive image"
+                                <li class=" pic">
+                                    <img src="Profile/assets/images/Jacob.jpg" class="shadow-sm img-fluid rounded-circle mx-auto d-block w3-animate-left" alt="Responsive image"
                                         id="profile-pic">
                                 </li>
-                                <li class="LinkedIn text-center">
-                                    <div class="spacer m-2">
-                                        <a class=' w-100 mx-auto' href="https://www.linkedin.com/in/jacob-nelson-b8a80571/">
-                                            <button class="btn">
-                                                <img src="Profile/assets/images/linkin.png" alt="LinkedIn" class="img-thumbnail">
-                                                <!-- <a class="btn btn-primary btn-lg" href="#" role="button">LinkedIn</a> -->
-                                            </button>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li class="Github text-center">
-                                    <div class="spacer m-2">
-                                        <a class='mx-auto' href="https://github.com/jrnels10">
-                                            <button class="btn">
-                                                <img src="Profile/assets/images/git.png" alt="git" class="img-thumbnail">
-                                                <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Github</a> -->
-                                            </button>
-                                        </a>
-                                    </div>
-                                </li>
+
                             </ul>
+                            <div class="spacer m-2 linkedin float-left">
+                                <a class=' w-100 mx-auto' href="https://www.linkedin.com/in/jacob-nelson-b8a80571/">
+                                    <button class="btn">
+                                        <img src="Profile/assets/images/linkin.png" alt="LinkedIn" class="img-thumbnail">
+                                    </button>
+                                </a>
+                            </div>
+
+                            <div class="spacer m-2 github float-right">
+                                <a class='mx-auto' href="https://github.com/jrnels10">
+                                    <button class="btn">
+                                        <img src="Profile/assets/images/git.png" alt="git" class="img-thumbnail">
+                                    </button>
+                                </a>
+                            </div>
+
                         </div>
                         <div class="col-8 w3-container about-me-text mt-5 w3-animate-right">
                             <p> A motivated full stack developer driven to create new products using open source web frameworks.
@@ -131,55 +132,61 @@
                                         <span class="badge badge-primary badge-pill">1</span>
                                     </li>
                                 </ul>
- -->
+                            -->
                             <!-- </div> -->
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row jumbotron-fluid test-jumbo">
+                    <div class="bottom-bio">
 
-                <div class="col-12 m-auto p-0" id="test-div">
-                    <div class="row project-header m-3">
-                        <h1 class="project-title">Projects</h1>
-                    </div>
-                    <div class="row" style="height: 80%">
-                        <div class="col-6 m-auto p-0 carry" style="border: coral solid 2px; height: 100%">
-
-                            <div class="carousel">
-                                <div class="carousel__slide test-p">
-                                    <!-- <p id="test-p">Slide 1</p> -->
-                                </div>
-
-                            </div>
-                            <hr>
-                            <nav>
-                                <ul class="menu">
-                                    <li class="menu__element">
-                                        <a href="#" class="js-prev">Prev</a>
-                                    </li>
-                                    <li class="menu__element">
-                                        <a href="#" class="js-next">Next</a>
-                                    </li>
-                                    <li class="menu__element">
-                                        <a href="#" class="js-start-loop">Start loop</a>
-                                    </li>
-                                    <li class="menu__element">
-                                        <a href="#" class="js-stop-loop">Stop loop</a>
-                                    </li>
-                                    <li class="menu__element">
-                                        <a href="#" class="js-destroy">Destroy</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="row project-preview m-0 w-100">
-                        <div class="col-12 video-preview m-auto p-0"></div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="row jumbotron-fluid test-jumbo">
+
+            <div class="col-12 m-auto p-0" id="test-div">
+                <div class="row project-header m-3">
+                    <h1 class="project-title">Projects</h1>
+                </div>
+                <div class="row" style="height: 80%">
+                    <div class="col-2 menu__element">
+                        <a href="#" class="js-prev">Prev</a>
+                    </div>
+                    <div class="col-6 mx-auto  p-0 carry">
+
+                        <div class="carousel">
+                            <div class="carousel__slide test-p">
+                                <!-- <p id="test-p">Slide 1</p> -->
+                            </div>
+
+                        </div>
+                        <hr>
+                        <nav>
+                            <ul class="menu">
+
+
+                                <li class="menu__element">
+                                    <a href="#" class="js-start-loop">Start loop</a>
+                                </li>
+                                <li class="menu__element">
+                                    <a href="#" class="js-stop-loop">Stop loop</a>
+                                </li>
+                                <!-- <li class="menu__element">
+                                    <a href="#" class="js-destroy">Destroy</a>
+                                </li> -->
+                            </ul>
+                        </nav>
+                        <div class="row project-preview m-0 w-100">
+                            <div class="col-12 video-preview m-auto p-0"></div>
+                        </div>
+                    </div>
+                    <div class="col-2 menu__element">
+                        <a href="#" class="js-next">Next</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
     <!-- footer -->

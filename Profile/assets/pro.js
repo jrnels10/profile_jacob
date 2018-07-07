@@ -66,8 +66,9 @@ $(document).ready(function () {
     //     console.log('port click');
     //     $('.change').replaceWith('<div class="row port-stuff">');
     function loadCarousel() {
-        $('.carousel').css({ 'width': '350%' });
-        $('.every-proj').css({ 'width': '200px' });
+        $('.carousel').css({ 'height': '150px' });
+        $('.every-proj').css({ 'width': '125px' });
+    
         for (i = 0; i < projectPort.length; i++) {
             console.log(projectPort[i]);
             box = $(`
@@ -87,13 +88,14 @@ $(document).ready(function () {
         }
     };
     loadCarousel();
-
+    $('.carousel').css({ 'height': '150px' });
+    $('.every-proj').css({ 'width': '125px' });
     var target;
     $('.sample').on('click', function () {
         console.log('clicked preview')
-        $('.carousel').css({ 'height': '150px' });
-        $('.every-proj').css({ 'width': '125px' });
+       
 
+    
         target = $(this).attr('id');
         for (i = 0; i < projectPort.length; i++) {
             if (target === projectPort[i].num) {
@@ -101,11 +103,11 @@ $(document).ready(function () {
                 // $('#projectPort[i].name').css('margin-left', '10px');
                 let showWindow = $(`<div class='row vid m-auto' style='width: 540px; height: 390px;>
                                         <div class= 'col-12>
-                                            <div class='row btn btn-secondary close-bar' style='height: 20px; background: whitesmoke'>
+                                            <div class='row btn btn-secondary close-bar' style='height: 40px; background: whitesmoke'>
                                                 <button class='close'>Close window</button>
                                             </div>
                                             <div class='row video-section'>
-                                                <iframe width="580" height="380" src="${projectPort[i].preview}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                                <iframe width="540" height="340" src="${projectPort[i].preview}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                                             </div>
                                         </div>
                                     </div>
@@ -124,8 +126,8 @@ $(document).ready(function () {
             // $("#" + target).show().siblings("div").show();
             // $('.row').css('margin-top', '120px');
             $('.video-preview').empty();
-
-
+  
+        
             loadCarousel()
         });
     });
