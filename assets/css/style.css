@@ -1,0 +1,91 @@
+html,
+body,
+header,
+#intro {
+    height: 100%;
+}
+
+#intro {
+    background: url("../images/2.png")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll
+}
+#images {
+  height: 100px;
+  width: 100%;
+ }
+ 
+ #images img {
+  height: 100%;
+  width: 400px;
+  overflow: hidden;
+
+ }
+
+.top-nav-collapse {
+    background-color: #24355C;
+  }
+  @media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+      background-color: #24355C;
+    }
+  }
+  @media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+      background-color: #24355C;
+    }
+  }
+
+  @font-face { 
+    font-family: 'Briberra'; 
+    src: url('Briberra.otf');
+ } 
+ .header-name {
+  color: whitesmoke;
+  text-shadow: 12px 1px 12px black;
+  font-family: 'Briberra'!important;
+  font-size: 30px !important;
+ }
+.profile-name {
+    /* height: 180px;
+    font-size: 100px !important; */
+    color: whitesmoke;
+    text-shadow: 12px 1px 12px black;
+    font-family: 'Briberra', Arial, Helvetica, sans-serif;
+    /* margin: 20px;*/
+    font-size: 160px !important;
+    z-index: 50;
+
+}
+#profile-pic {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-content: center;
+  align-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 200px;
+}
+#best-features {
+  z-index: 100;
+}
+
+.rg_ic, .irc_mi, #Capa_1{ 
+  -webkit-transition: 1s ease-out;
+  -moz-transition:  1s ease-out;
+  transition:  1s ease-out;
+}
+
+
+  
+  
+  .rg_ic:hover, .irc_mi:hover, #Capa_1:hover {
+    -webkit-transform: rotateZ(220deg);
+    -moz-transform: rotateZ(220deg);
+    transform: rotateZ(220deg);
+  }
