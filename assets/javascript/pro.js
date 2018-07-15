@@ -173,7 +173,7 @@ $(document).ready(function () {
 </g>
 </svg></div>`);
 
-    $('.intro-links').append(linkedIn,gitHub)
+    $('.intro-links').append(linkedIn, gitHub)
 
 
 
@@ -226,61 +226,56 @@ $(document).ready(function () {
         for (i = 0; i < projectPort.length; i++) {
             console.log(projectPort[i]);
             box = $(`
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 proj-cont" id="${projectPort[i].num}">
 
             <div class="view overlay z-depth-1-half h-100" id="images">
-                <img src="${projectPort[i].image}" class="img-fluid"  >
+                <img src="${projectPort[i].image}" class="img-fluid">
                 <a href="${projectPort[i].link}">
                     <div class="mask rgba-white-slight"></div>
                 </a>
-            </div>
-
-            <h4 class="my-4 font-weight-bold" id='${projectPort[i].label}'></h4>
-            <p class="grey-text" id='${projectPort[i].descr}></p>
-
-        </div>
-                        
-                  
+                </div>
+                
+                <h4 class="my-4 font-weight-bold" id='${projectPort[i].label}'></h4>
+                <p class="grey-text" id='${projectPort[i].descr}></p>
+                
+                </div>
+                
+                
                 `);
             $('#test-p').append(box);
         }
     };
-    loadCarousel();
-    var target;
-    $('.sample').on('click', function () {
-        console.log('clicked preview')
+    // <button class="btn primary-btn sample w-100 mb-4">Preview</button>
+    // loadCarousel();
+    // var target;
+    // $('.proj-con').hover(function() {
+    //     console.log('clicked preview')
+
+    //     target = $(this).attr('id');
+    //     console.log(target)
+    //     for (i = 0; i < projectPort.length; i++) {
+    //         if (target === projectPort[i].num) {
+    //             console.log('I found ya!');
+    //             // $('#projectPort[i].name').css('margin-left', '10px');
+    //             let showWindow = $(`
+    //                                         <div class='row video-section'>
+    //                                             <iframe width="540" height="340" src="${projectPort[i].preview}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    //                                         </div>
+                                     
+    //                                 `)
+    //             $('.prj-img').replaceWidth(showWindow);
+    //         };
+    //     }
 
 
-
-        target = $(this).attr('id');
-        for (i = 0; i < projectPort.length; i++) {
-            if (target === projectPort[i].num) {
-                console.log('I found ya!');
-                // $('#projectPort[i].name').css('margin-left', '10px');
-                let showWindow = $(`<div class='row vid m-auto' style='width: 540px; height: 390px;>
-                                        <div class= 'col-12>
-                                            <div class='row btn btn-secondary close-bar' style='height: 40px; background: whitesmoke'>
-                                                <button class='close'>Close window</button>
-                                            </div>
-                                            <div class='row video-section'>
-                                                <iframe width="540" height="340" src="${projectPort[i].preview}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    `)
-                $('.video-preview').append(showWindow);
-            };
-        }
+    //     $('.close').on('click', function () {
+    //         console.log('target');
+    //         $('.video-preview').empty();
 
 
-        $('.close').on('click', function () {
-            console.log('target');
-            $('.video-preview').empty();
-
-
-            loadCarousel()
-        });
-    });
+    //         loadCarousel()
+    //     });
+    // });
 
 
 

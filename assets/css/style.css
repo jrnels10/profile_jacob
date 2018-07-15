@@ -14,7 +14,7 @@ header,
     background-attachment: scroll
 }
 #images {
-  height: 100px;
+  height: 120px;
   width: 100%;
  }
  
@@ -22,7 +22,10 @@ header,
   height: 100%;
   width: 400px;
   overflow: hidden;
+ }
 
+ .proj-cont {
+   margin-bottom: 70px;
  }
 
 .top-nav-collapse {
