@@ -246,7 +246,7 @@ $(document).ready(function () {
         }
     };
     // <button class="btn primary-btn sample w-100 mb-4">Preview</button>
-    // loadCarousel();
+    loadCarousel();
     // var target;
     // $('.proj-con').hover(function() {
     //     console.log('clicked preview')
