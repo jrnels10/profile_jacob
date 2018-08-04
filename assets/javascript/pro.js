@@ -210,8 +210,14 @@ $(document).ready(function () {
             image: 'assets/images/wild_west.jpeg',
             label: 'Crazy Train',
             descr: 'timed train stuff',
+        },
+        friendFinder = {
+            num: '5',
+            link: 'https://polar-crag-61522.herokuapp.com/',
+            image: 'assets/images/friend_finder.png',
+            label: 'Friend Finder',
+            descr: 'timed train stuff',
         }
-
     ]
 
     console.log(projectPort.length)
@@ -261,7 +267,7 @@ $(document).ready(function () {
     //                                         <div class='row video-section'>
     //                                             <iframe width="540" height="340" src="${projectPort[i].preview}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     //                                         </div>
-                                     
+
     //                                 `)
     //             $('.prj-img').replaceWidth(showWindow);
     //         };
