@@ -19,15 +19,24 @@ header,
  }
  
  #images img {
-  height: 100%;
-  width: 400px;
-  overflow: hidden;
+  margin: auto;
+    height: auto; 
+    width: auto; 
+    max-width: 510px !important; 
+    max-height: 340px !important;
  }
 
  .proj-cont {
    margin-bottom: 70px;
  }
-
+ .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 100%;
+}
 .top-nav-collapse {
     background-color: #24355C;
   }
