@@ -218,13 +218,13 @@ $(document).ready(function () {
             label: 'Friend Finder',
             descr: 'timed train stuff',
         },
-        // travelBuddies = {
-        //     num: '6',
-        //     link: 'https://polar-crag-61522.herokuapp.com/',
-        //     image: 'assets/images/friend_finder.png',
-        //     label: 'Friend Finder',
-        //     descr: 'timed train stuff',
-        // }
+        goodBurger = {
+            num: '6',
+            link: 'https://fast-thicket-17728.herokuapp.com/',
+            image: 'assets/images/burger.jpeg',
+            label: 'Good Burger',
+            descr: 'Heroku app',
+        }
     ]
 
     console.log(projectPort.length)
