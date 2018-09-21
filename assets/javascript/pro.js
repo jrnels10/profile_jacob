@@ -224,7 +224,15 @@ $(document).ready(function () {
             image: 'assets/images/burger.jpeg',
             label: 'Good Burger',
             descr: 'Heroku app',
+        },
+        clickyGame = {
+            num: '7',
+            link: 'https://jrnels10.github.io/Clicky_Game/',
+            image: 'assets/images/clicky.jpeg',
+            label: 'React Clicky Game',
+            descr: 'Heroku app',
         }
+        
     ]
 
     console.log(projectPort.length)
